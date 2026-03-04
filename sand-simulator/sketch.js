@@ -10,8 +10,8 @@ const materials = new Map([
   ['water', [1, [0, 0, 255]]],
   ['sand',  [2, [226, 202, 118]]],
   ['stone', [3, [100, 100, 100]]]])
-matIds = Array.from (materials.keys())
-matValues = Array.from(materials.values())
+let matIds = Array.from (materials.keys())
+let matValues = Array.from(materials.values())
 
 class Particle {
   constructor(id) {
@@ -97,9 +97,9 @@ class Particle {
   }
 }
 
-for (i = 0; i < rows; i++) {
+for (let i = 0; i < rows; i++) {
   arraySpace[i] = []
-  for (j = 0; j < columns; j++)
+  for (let j = 0; j < columns; j++)
     arraySpace[i][j] = new Particle("empty")
 }
 // console.log(arraySpace)
